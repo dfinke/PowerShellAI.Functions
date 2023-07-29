@@ -1,3 +1,3 @@
 # PowerShell AI Functions
 
-Function calling allows developers to more reliably get structured data back from the model.
+Function calling allows developers to more reliably get structured data back from the OpenAI GPT model.
