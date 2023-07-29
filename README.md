@@ -19,7 +19,7 @@ Install-Module -Name PowerShellAI.Functions
 
 ## Usage
 
-To use `PowerShellAIFunctionRig`, you first need to import the module into your PowerShell session (as shown above). Here's an example of how to convert a PowerShell function's metadata to an OpenAI function call spec:
+To use `PowerShellAIFunctions`, you first need to import the module into your PowerShell session (as shown above). Here's an example of how to convert a PowerShell function's metadata to an OpenAI function call spec:
 
 ```powershell
 function Get-CurrentWeather {
