@@ -26,8 +26,8 @@ PowerShellAI Functions Module a PowerShell module designed to work as a bridge b
         PSData = @{
             Category   = "PowerShellAI Functions bridge for OpenAI"
             Tags       = @('PowerShell', 'PowerShellAI', 'OpenAI', 'Function_Calling')
-            ProjectUri = "https://github.com/dfinke/PowerShellAI.FunctionsRig"
-            LicenseUri = "https://github.com/dfinke/PowerShellAI.FunctionsRig/blob/master/LICENSE.txt"
+            ProjectUri = "https://github.com/dfinke/PowerShellAI.Functions"
+            LicenseUri = "https://github.com/dfinke/PowerShellAI.Functions/blob/master/LICENSE.txt"
         }
     }
 }
