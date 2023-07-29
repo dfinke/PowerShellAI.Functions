@@ -10,6 +10,9 @@
 PowerShellAI Functions Module a PowerShell module designed to work as a bridge between PowerShell functions and OpenAI.
 '@
 
+    # Modules that must be imported into the global environment prior to importing this module
+    # RequiredModules   = @()
+
     FunctionsToExport = @(
         'ConvertFrom-FunctionDefinition'
         'ConvertTo-OpenAIFunctionSpec'
