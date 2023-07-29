@@ -75,7 +75,22 @@ The above example will output the following JSON:
 }
 ```
 
-## Notebooks
+## Polyglot Interactive Notebooks
 
-Check out the end-to-end. Create a function, call the OpenAI API, and use the function call.
-- [How-To-Call-Functions-With-Chat-Models.ipynb](Notebooks/How-To-Call-Functions-With-Chat-Models.ipynb)
+Check out the end-to-end examples: 
+
+| Notebook Name and Link | Description |
+| --- | --- |
+| [How-To-Call-Functions-With-Chat-Models.ipynb](Notebooks/How-To-Call-Functions-With-Chat-Models.ipynb)| This notebook covers how to use the Chat Completions API in combination with external functions to extend the capabilities of GPT models. |
+
+
+## PowerShell Functions
+
+| Function | Description |
+| --- | --- |
+| ConvertFrom-FunctionDefinition | Converts a PowerShell function definition to an OpenAI function call spec. |
+| ConvertTo-OpenAIFunctionSpec | Converts a PowerShell function call spec to an OpenAI function call spec. |
+| ConvertTo-OpenAIFunctionSpecDataType | Converts a PowerShell data type to an OpenAI function call spec data type. |
+| Get-ChatCompletion | Calls the OpenAI API to get a completion for a chat model. |
+| Get-FunctionDefinition | Gets the definition of a PowerShell function. |
+| Get-OpenAISpecDescriptions | Gets the descriptions of the OpenAI function call spec. |
