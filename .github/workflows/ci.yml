@@ -3,6 +3,7 @@ on:
     paths-ignore:
       - "README.md"
       - "changelog.md"
+      - "**/*.ipynb"
     branches:
       - master
 
