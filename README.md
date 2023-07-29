@@ -8,6 +8,15 @@ Function calling allows developers to more reliably get structured data back fro
 
 This module is intended to make it easy for developers to integrate AI capabilities into their PowerShell scripts, without needing deep knowledge of the OpenAI API's specifics.
 
+## Installation
+
+To install `PowerShellAI.Functions`, run the following in a PowerShell session:
+
+```powershell
+Install-Module -Name PowerShellAI # this is required
+Install-Module -Name PowerShellAI.Functions
+```
+
 ## Usage
 
 To use `PowerShellAIFunctionRig`, you first need to import the module into your PowerShell session (as shown above). Here's an example of how to convert a PowerShell function's metadata to an OpenAI function call spec:
@@ -77,12 +86,11 @@ The above example will output the following JSON:
 
 ## Polyglot Interactive Notebooks
 
-Check out the end-to-end examples: 
+Check out the end-to-end example:
 
 | Notebook Name and Link | Description |
 | --- | --- |
 | [How-To-Call-Functions-With-Chat-Models.ipynb](Notebooks/How-To-Call-Functions-With-Chat-Models.ipynb)| This notebook covers how to use the Chat Completions API in combination with external functions to extend the capabilities of GPT models. |
-
 
 ## PowerShell Functions
 
