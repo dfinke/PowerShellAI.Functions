@@ -21,9 +21,11 @@ function ConvertTo-OpenAIFunctionSpecDataType {
     [CmdletBinding()]
     param($targetType)
 
+    # Use closest compatible types from json-schema https://json-schema.org/understanding-json-schema/
     switch ($targetType) {
         { $_ -match 'int32|decimal|float|single|int' } { return 'number' }
         { $_ -match 'switchparameter|bool|boolean'} { return 'boolean' }
-        default { return $targetType }
+        { $_ -match 'string'} { return 'string' }
+        default { return 'object' }
     }
 }

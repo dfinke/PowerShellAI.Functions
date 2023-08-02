@@ -20,6 +20,7 @@ PowerShellAI Functions Module a PowerShell module designed to work as a bridge b
         'Get-ChatCompletion'
         'Get-FunctionDefinition'
         'Get-OpenAISpecDescriptions'
+        'Invoke-ChatWithModuleContext'
     )
 
     PrivateData       = @{
