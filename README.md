@@ -17,6 +17,15 @@ Install-Module -Name PowerShellAI # this is required
 Install-Module -Name PowerShellAI.Functions
 ```
 
+## Interactive Notebooks
+
+Check out the end-to-end example:
+
+| Notebook Name and Link | Description |
+| --- | --- |
+| [How To Call Functions With Chat Models](Notebooks/How-To-Call-Functions-With-Chat-Models.ipynb)| This notebook covers how to use the Chat Completions API in combination with external functions to extend the capabilities of GPT models. |
+| [How To Call Functions With Chat Models SQL Style](Notebooks/How-To-Call-Functions-With-Chat-Models-SQL-Style.ipynb)| This notebook covers how to use natural language to query a SQL Server |
+
 ## Usage
 
 To use `PowerShellAIFunctions`, you first need to import the module into your PowerShell session (as shown above). Here's an example of how to convert a PowerShell function's metadata to an OpenAI function call spec:
@@ -83,14 +92,6 @@ The above example will output the following JSON:
   }
 }
 ```
-
-## Polyglot Interactive Notebooks
-
-Check out the end-to-end example:
-
-| Notebook Name and Link | Description |
-| --- | --- |
-| [How-To-Call-Functions-With-Chat-Models.ipynb](Notebooks/How-To-Call-Functions-With-Chat-Models.ipynb)| This notebook covers how to use the Chat Completions API in combination with external functions to extend the capabilities of GPT models. |
 
 ## PowerShell Functions
 
