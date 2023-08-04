@@ -5,6 +5,7 @@ on:
       - "changelog.md"
       - "**/*.ipynb"
       - "devcontainer.json"
+      - "./Examples"
     branches:
       - master
 
