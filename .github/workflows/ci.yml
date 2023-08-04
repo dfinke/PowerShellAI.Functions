@@ -4,6 +4,7 @@ on:
       - "README.md"
       - "changelog.md"
       - "**/*.ipynb"
+      - "devcontainer.json"
     branches:
       - master
 
