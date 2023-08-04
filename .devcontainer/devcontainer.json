@@ -3,7 +3,8 @@
 {
 	"name": "PowerShell",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/powershell:lts-debian-11",
+	
+	"image": "mcr.microsoft.com/dotnet/sdk:7.0",
 	"features": {
 		"ghcr.io/devcontainers/features/common-utils:2": {
 			"installZsh": "true",
@@ -26,6 +27,7 @@
 			
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
+				"ms-dotnettools.dotnet-interactive-vscode",
 				"ms-vscode.powershell"
 			]
 		}
