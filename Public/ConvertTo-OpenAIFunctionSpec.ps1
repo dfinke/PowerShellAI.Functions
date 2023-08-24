@@ -35,9 +35,17 @@ function ConvertTo-OpenAIFunctionSpec {
     foreach ($function in $functions) {
         $descriptions = Get-OpenAISpecDescriptions $function.Body.extent.text
 
+        if ($null -eq $descriptions.FunctionDescription) {
+            $targetDescription = 'not supplied'
+        }
+        else {
+            $targetDescription = $descriptions.FunctionDescription
+        }
+
         $functionSpec += [ordered]@{
             name        = $function.Name
-            description = $null -eq $descriptions.FunctionDescription ? 'not supplied' : $descriptions.FunctionDescription
+            description = $targetDescription
+
             parameters  = [ordered]@{
                 type       = 'object'
                 properties = [ordered]@{}
@@ -54,9 +62,16 @@ function ConvertTo-OpenAIFunctionSpec {
                 $typeName = 'array'                
             }
 
+            if ($null -eq $descriptions.ParameterDescription.$parameterName) {
+                $targetDescription = 'not supplied'
+            }
+            else {
+                $targetDescription = $descriptions.ParameterDescription.$parameterName
+            }
+
             $properties[$parameterName] = [ordered]@{            
                 type        = ConvertTo-OpenAIFunctionSpecDataType $typeName
-                description = $null -eq $descriptions.ParameterDescription.$parameterName ? 'not supplied' : $descriptions.ParameterDescription.$parameterName
+                description = $targetDescription
             }
         
             $enum = ($parameter.Attributes | Where-Object { $_.typeName.name -eq 'ValidateSet' }).PositionalArguments.Value

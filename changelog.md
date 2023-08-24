@@ -1,3 +1,7 @@
+# v0.1.2
+
+- Works in PS v5.x. Fixed bug in `ConvertTo-OpenAIFunctionSpec`. No longer uses ternary operator.
+
 # v0.1.1
 
 - Add interactive notebook showing how to use GPT, natural language, and SQL to query a SQL Server
