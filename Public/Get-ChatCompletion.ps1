@@ -23,12 +23,16 @@ function Get-ChatCompletion {
         [object[]]$messages,
         $functions,
         $function_call,
-        $model = 'gpt-3.5-turbo-16k'
+        $model = 'gpt-3.5-turbo-16k',
+        $temperature = 1.0,
+        $top_p = 1.0
     )
 
     $data = [Ordered]@{
-        model    = $model
-        messages = $messages 
+        model       = $model
+        temperature = $temperature
+        top_p       = $top_p
+        messages    = $messages 
     }
 
     if ($null -ne $functions) {        

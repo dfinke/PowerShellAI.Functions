@@ -1,3 +1,6 @@
+# v0.1.3
+
+- Update Get-ChatCompletion to include temperature and top_p parameters, and update default model to gpt-3.5-turbo-16k
 # v0.1.2
 
 - Works in PS v5.x. Fixed bug in `ConvertTo-OpenAIFunctionSpec`. No longer uses ternary operator.
