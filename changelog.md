@@ -1,3 +1,7 @@
+# v0.1.4
+
+- Support Azure OpenAI
+
 # v0.1.3
 
 - Update Get-ChatCompletion to include temperature and top_p parameters, and update default model to gpt-3.5-turbo-16k
