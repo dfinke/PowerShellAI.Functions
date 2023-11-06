@@ -48,7 +48,16 @@ function Get-ChatCompletion {
 
     try {
         $Error.Clear()
-        Invoke-OpenAIAPI -Uri (Get-OpenAIChatCompletionUri) -Method 'Post' -Body $body
+        # Invoke-OpenAIAPI -Uri (Get-OpenAIChatCompletionUri) -Method 'Post' -Body $body
+        
+        if ((Get-ChatAPIProvider) -eq 'OpenAI') {
+            $uri = Get-OpenAIChatCompletionUri
+        }
+        elseif ((Get-ChatAPIProvider) -eq 'AzureOpenAI') {
+            $uri = Get-ChatAzureOpenAIURI
+        }
+
+        Invoke-OpenAIAPI -Uri $uri -Method 'Post' -Body $body
     }
     catch {
         $_
