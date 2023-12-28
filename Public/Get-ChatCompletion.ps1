@@ -25,6 +25,7 @@ function Get-ChatCompletion {
         $function_call,
         $model = 'gpt-3.5-turbo-16k',
         $temperature = 1.0,
+        $max_tokens,
         $top_p = 1.0
     )
 
@@ -35,6 +36,10 @@ function Get-ChatCompletion {
         messages    = $messages 
     }
 
+    if ($null -ne $max_tokens) {
+        $data.max_tokens = $max_tokens
+    }
+    
     if ($null -ne $functions) {        
         $data.functions = @($functions)       
     }
