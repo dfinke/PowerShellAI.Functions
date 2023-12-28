@@ -1,3 +1,7 @@
+# v0.1.5
+
+- Add max_tokens parameter to Get-ChatCompletion function
+
 # v0.1.4
 
 - Support Azure OpenAI
